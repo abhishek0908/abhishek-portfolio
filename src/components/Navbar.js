@@ -16,7 +16,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto flex justify-between items-center px-4">
+      <div className="container mx-auto flex justify-between items-center px-4 lg:justify-center">
         {/* Hamburger Menu for Mobile */}
         <button
           className="lg:hidden text-white focus:outline-none"
