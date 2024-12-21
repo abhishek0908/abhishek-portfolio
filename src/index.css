@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body{
+    @apply 
+    bg-gradient-to-r from-slate-800 to-slate-400;
+
+} */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: linear-gradient(to right, #1E3A8A, #2563EB, #1D4ED8); /* Same gradient as Hero */
+    color: white; /* Ensures text contrast with the background */
+  }
+  
