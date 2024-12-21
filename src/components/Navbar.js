@@ -9,6 +9,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav
       className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 text-white py-4 fixed w-full z-10 shadow-lg"
@@ -45,6 +49,7 @@ const Navbar = () => {
             <li key={index} className="lg:inline-block">
               <a
                 href={link.href}
+                onClick={closeMenu} // Close the menu on click
                 className="block text-lg font-semibold text-center py-2 hover:text-yellow-300 transition-all lg:py-0"
               >
                 {link.name}
