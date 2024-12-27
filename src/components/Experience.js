@@ -36,8 +36,9 @@ const Experience = () => {
                   an authentication system and developing various APIs.
                 </li>
                 <li>
-                  Developed workflows for deploying the microservice on in-house servers.
-                </li>
+  Developed workflows for deploying the microservice on <span className="font-semibold">in-house servers</span>.
+</li>
+
               </ul>
             </div>
           </div>

@@ -9,7 +9,7 @@ const Projects = () => {
       date: "May 2023",
       description: [
         "A web application aimed at helping over 6000 students annually enhance their career opportunities through insights and resources shared by alumni.",
-        "Onboards over 2000 new students yearly, providing access to job postings, interview experiences, academic content, and comprehensive alumni information.",
+        "Developed onboarding capabilities to support over 2000 new students yearly, providing access to job postings, interview experiences, academic content, and comprehensive alumni information.",
         "Integrated email notification feature to improve user engagement with timely job posting notifications.",
         "Implemented Google authentication for seamless sign-in and enhanced account security.",
       ],
@@ -24,7 +24,7 @@ const Projects = () => {
         "Collaborated with a team of 2 members with a major focus on building smart contracts.",
         "Conducted a live demonstration of the voting system with a small test group consisting of 2 individuals.",
       ],
-      link: "https://github.com/", // Replace with actual link
+      link: "https://github.com/abhishek0908/Digivote/tree/master/DigiVote", // Replace with actual link
     },
   ];
 
