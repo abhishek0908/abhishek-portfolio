@@ -72,12 +72,13 @@ const Navbar = () => {
             { name: "Experience", href: "#experience" },
             { name: "Projects", href: "#projects" },
             { name: "Skills", href: "#skills" },
+            { name: "Resume", href: "https://drive.google.com/file/d/1yjWqxPhfdoD56PzY4OWWdn6aNuqPb5Ax/view?usp=sharing", isExternal: true },
             { name: "Connect", href: "#connect" },
-
           ].map((link, index) => (
             <li key={index} className="lg:inline-block">
               <a
                 href={link.href}
+                target={link.isExternal ? "_blank" : "_self"}
                 onClick={closeMenu} // Close the menu on click
                 className="block text-lg font-semibold text-center py-2 hover:text-yellow-300 transition-all lg:py-0"
               >
