@@ -15,13 +15,13 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+    setIsConnectOpen(false);
   };
 
   const toggleConnectMenu = () => {
     setIsConnectOpen(!isConnectOpen);
   };
 
-  // Close menu if clicked outside the navbar or the connect dropdown
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -72,6 +72,8 @@ const Navbar = () => {
             { name: "Experience", href: "#experience" },
             { name: "Projects", href: "#projects" },
             { name: "Skills", href: "#skills" },
+            { name: "Connect", href: "#connect" },
+
           ].map((link, index) => (
             <li key={index} className="lg:inline-block">
               <a
@@ -83,53 +85,6 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-
-          {/* Connect Dropdown Button */}
-          <li className="relative lg:inline-block" ref={connectRef}>
-            <button
-              onClick={toggleConnectMenu}
-              className="block text-lg font-semibold text-center py-2 hover:text-yellow-300 transition-all"
-            >
-              Connect
-            </button>
-
-            {/* Connect Dropdown */}
-            {isConnectOpen && (
-              <motion.div
-                className="absolute bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 text-white w-48 mt-2 p-4 rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ul>
-                  <li>
-                    <a
-                      href="https://github.com/abhishek0908"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block py-2 text-lg font-semibold hover:text-yellow-300 transition-all"
-                      onClick={closeMenu}
-                    >
-                      GitHub
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/abhishek-udiya-87452618b/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block py-2 text-lg font-semibold hover:text-yellow-300 transition-all"
-                      onClick={closeMenu}
-                    >
-                      LinkedIn
-                    </a>
-                  </li>
-                
-                </ul>
-              </motion.div>
-            )}
-          </li>
         </ul>
       </div>
     </motion.nav>
