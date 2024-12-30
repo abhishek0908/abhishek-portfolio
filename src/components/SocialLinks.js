@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 const SocialLinks = () => {
   const links = [
@@ -23,10 +24,15 @@ const SocialLinks = () => {
       icon: <FaEnvelope />,
       label: 'Gmail',
     },
+    {
+      href: 'https://leetcode.com/u/abhish0908/', // Replace with your actual LeetCode profile URL
+      icon: <SiLeetcode />,
+      label: 'LeetCode',
+    },
   ];
 
   return (
-    <footer id = "connect" className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 py-8 text-white">
+    <footer id="connect" className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 py-8 text-white">
       <div className="container mx-auto text-center">
         <h2 className="text-xl font-semibold mb-4">Connect with Me</h2>
         <div className="flex justify-center space-x-6">
