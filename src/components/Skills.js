@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPython, FaJava, FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { SiDjango, SiMongodb, SiBootstrap, SiJavascript } from 'react-icons/si';
+import { SiDjango, SiMongodb, SiJavascript, SiDocker, SiRedis } from 'react-icons/si';
 import { AcademicCapIcon } from '@heroicons/react/24/outline'; // Heroicons for icons
 
 const Skills = () => {
@@ -15,7 +15,8 @@ const Skills = () => {
     { name: 'SQL', icon: <FaDatabase className="text-4xl text-blue-700" /> },
     { name: 'HTML5', icon: <FaHtml5 className="text-4xl text-orange-600" /> },
     { name: 'CSS3', icon: <FaCss3 className="text-4xl text-blue-500" /> },
-    { name: 'Bootstrap', icon: <SiBootstrap className="text-4xl text-purple-600" /> },
+    { name: 'Docker', icon: <SiDocker className="text-4xl text-blue-500" /> },
+    { name: 'Redis', icon: <SiRedis className="text-4xl text-red-600" /> },
   ];
 
   const coreSubjects = [

@@ -3,55 +3,77 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 const SocialLinks = () => {
-  const links = [
-    {
-      href: 'https://github.com/abhishek0908',
-      icon: <FaGithub />,
-      label: 'GitHub',
-    },
-    {
-      href: 'https://www.linkedin.com/in/abhishek-udiya-87452618b/',
-      icon: <FaLinkedin />,
-      label: 'LinkedIn',
-    },
-    {
-      href: 'https://twitter.com/abhishek_udiya',
-      icon: <FaTwitter />,
-      label: 'Twitter',
-    },
-    {
-      href: 'mailto:abhishekudiya09@gmail.com',
-      icon: <FaEnvelope />,
-      label: 'Gmail',
-    },
-    {
-      href: 'https://leetcode.com/u/abhish0908/', // Replace with your actual LeetCode profile URL
-      icon: <SiLeetcode />,
-      label: 'LeetCode',
-    },
-  ];
-
   return (
-    <footer id="connect" className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 py-8 text-white">
+    <footer
+      id="connect"
+      className="py-20 bg-blue-100 text-white"
+    >
       <div className="container mx-auto text-center">
-        <h2 className="text-xl font-semibold mb-4">Connect with Me</h2>
-        <div className="flex justify-center space-x-6">
-          {links.map((link, index) => (
-            <a
-              key={index}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-              className="text-3xl hover:text-yellow-300 transition-transform transform hover:scale-110"
-            >
-              {link.icon}
-            </a>
-          ))}
+        {/* Introductory line or title above the cards */}
+        <h1 className="text-4xl font-semibold mb-8 text-blue-500">Let's Connect and Collaborate!</h1>
+        <p className="text-lg text-gray-700 mb-12">Feel free to reach out through these platforms and stay connected with my work!</p>
+
+        <div className="flex justify-center gap-16">
+
+          {/* Connect with Me Card */}
+          <div className="bg-blue-600 text-white rounded-lg shadow-lg w-full max-w-md p-8 hover:scale-105 transition-all">
+            <h2 className="text-2xl font-semibold text-center mb-6">Connect with Me</h2>
+            <div className="flex justify-center gap-8">
+              <a
+                href="https://www.linkedin.com/in/abhishek-udiya-87452618b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-4xl hover:text-blue-300 transition-all transform hover:scale-110"
+              >
+                <FaLinkedin />
+              </a>
+              <a
+                href="https://twitter.com/abhishek_udiya"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+                className="text-4xl hover:text-blue-300 transition-all transform hover:scale-110"
+              >
+                <FaTwitter />
+              </a>
+              <a
+                href="mailto:abhishekudiya09@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Gmail"
+                className="text-4xl hover:text-blue-300 transition-all transform hover:scale-110"
+              >
+                <FaEnvelope />
+              </a>
+            </div>
+          </div>
+
+          {/* Coding Platforms Card */}
+          <div className="bg-blue-600 text-white rounded-lg shadow-lg w-full max-w-md p-8 hover:scale-105 transition-all">
+            <h2 className="text-2xl font-semibold text-center mb-6">Coding Platforms</h2>
+            <div className="flex justify-center gap-8">
+              <a
+                href="https://github.com/abhishek0908"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-4xl hover:text-blue-300 transition-all transform hover:scale-110"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href="https://leetcode.com/u/abhish0908/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LeetCode"
+                className="text-4xl hover:text-blue-300 transition-all transform hover:scale-110"
+              >
+                <SiLeetcode />
+              </a>
+            </div>
+          </div>
         </div>
-        {/* <p className="mt-4 text-sm text-gray-300">
-          © {new Date().getFullYear()} Abhishek Udiya. All rights reserved.
-        </p> */}
       </div>
     </footer>
   );

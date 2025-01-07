@@ -1,5 +1,4 @@
 import React from 'react';
-import profileImage from '../media/Abhishek.png'; // Replace with your actual image path
 
 const About = () => {
   return (
@@ -8,7 +7,7 @@ const About = () => {
         {/* Image Section */}
         <div className="flex justify-center">
           <img
-            src={profileImage}
+            src="/media/Abhishek.png" // Referencing image from the public/media folder
             alt="Abhishek Udiya"
             className="rounded-xl shadow-lg w-64 h-64 sm:w-80 sm:h-80 object-cover transition-transform transform hover:scale-105"
           />
@@ -20,7 +19,7 @@ const About = () => {
             About <span className="text-indigo-600">Me</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 leading-8">
-            Hello! I'm <span className="font-semibold text-indigo-600">Abhishek Udiya</span>, a motivated 
+            Hello! I'm <span className="font-semibold text-indigo-600">Abhishek Udiya</span>, a passionate 
             <span className="font-semibold text-indigo-600"> Software Engineer</span> with expertise in developing scalable 
             <span className="font-semibold"> microservices</span> and full-stack applications.
           </p>
@@ -43,15 +42,32 @@ const About = () => {
             </li>
           </ul>
           <p className="text-lg sm:text-xl text-gray-700 leading-8 mt-4">
-            I am passionate about working with  <span className="font-semibold text-indigo-600">Software Engineering</span>, 
+            I am passionate about working with <span className="font-semibold text-indigo-600">Software Engineering</span>, 
              and modern frameworks to build solutions that address real-world challenges.
           </p>
-          <div className="mt-6 flex justify-center md:justify-start">
+          <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <a
-              href="#projects"
-              className="px-6 py-3 bg-indigo-600 text-white text-lg font-medium rounded-lg shadow-md hover:bg-indigo-500 transition"
+              href="https://www.linkedin.com/in/your-linkedin-profile" // Replace with your LinkedIn profile link
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-gray-800 text-white text-lg font-medium rounded-lg shadow-md hover:bg-gray-700 transition"
             >
-              Explore My Projects
+              Let's Connect
+            </a>
+            <a
+              href="/media/Abhishek_Udiya_Resume.pdf" // Referencing PDF from the public/media folder
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-500 transition"
+            >
+              View My Resume
+            </a>
+            <a
+              href="/media/Abhishek_Udiya_Resume.pdf" // Referencing PDF from the public/media folder
+              download="Abhishek_Udiya_Resume.pdf" // The name the file will have when downloaded
+              className="px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-500 transition"
+            >
+              Download Resume
             </a>
           </div>
         </div>

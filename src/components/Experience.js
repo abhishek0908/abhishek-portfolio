@@ -32,13 +32,15 @@ const Experience = () => {
                   for scalable, maintainable code.
                 </li>
                 <li>
-                  Contributed to the backend server (<span className="font-semibold">Node.js</span>) by implementing 
+                  Contributed to the backend server in <span className="font-semibold text-indigo-600">Node.js</span> by implementing 
                   an authentication system and developing various APIs.
                 </li>
                 <li>
-  Developed workflows for deploying the microservice on <span className="font-semibold">in-house servers</span>.
-</li>
-
+                  Developed workflows for deploying the microservice on <span className="font-semibold"><span className="font-semibold text-indigo-600">in-house server</span></span>.
+                </li>
+                <li>
+                  Collaborated with ML Engineers to integrate an advanced heatmap generation algorithm into a new microservice using gRPC.
+                </li>
               </ul>
             </div>
           </div>
@@ -55,7 +57,7 @@ const Experience = () => {
                 <li>
                   Created a micro-service that generates Business Resolution (BR) documents, integrating features and 
                   handling edge cases using the <span className="font-semibold text-indigo-600">Django framework</span> and 
-                  <span className="font-semibold text-indigo-600">WeasyPrint library</span>.
+                  <span className="font-semibold text-indigo-600"> WeasyPrint library</span>.
                 </li>
                 <li>
                   Designed an automated pipeline to streamline the process of data dumping between databases, 

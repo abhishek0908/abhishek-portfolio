@@ -72,7 +72,6 @@ const Navbar = () => {
             { name: "Experience", href: "#experience" },
             { name: "Projects", href: "#projects" },
             { name: "Skills", href: "#skills" },
-            { name: "Resume", href: "https://drive.google.com/file/d/1yjWqxPhfdoD56PzY4OWWdn6aNuqPb5Ax/view?usp=sharing", isExternal: true },
             { name: "Connect", href: "#connect" },
           ].map((link, index) => (
             <li key={index} className="lg:inline-block">
