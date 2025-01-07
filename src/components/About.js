@@ -6,12 +6,14 @@ const About = () => {
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-4 md:px-6">
         {/* Image Section */}
         <div className="flex justify-center md:justify-start mb-8 md:mb-0">
-          <img
-            src="/media/Abhishek.png" // Referencing image from the public/media folder
-            alt="Abhishek Udiya"
-            className="rounded-xl shadow-lg w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover transition-transform transform hover:scale-105"
-          />
-        </div>
+  <img
+    src="/media/Abhishek.png" // Referencing image from the public/media folder
+    alt="Abhishek Udiya"
+    className="rounded-xl shadow-lg w-80 h-80 sm:w-96 sm:h-96 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] object-cover transition-transform transform hover:scale-105"
+  />
+</div>
+
+
 
         {/* Text Section */}
         <div className="text-left">
