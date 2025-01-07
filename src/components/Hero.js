@@ -126,7 +126,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
       >
-        A passionate <span className="font-medium text-yellow-300">Software Engineer</span> crafting elegant and scalable solutions.
+        A passionate <span className="font-medium text-yellow-300">Software Engineer</span> crafting robust and scalable solutions.
       </motion.p>
 
       {/* Call-to-Action Button */}

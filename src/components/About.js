@@ -5,7 +5,7 @@ const About = () => {
     <section id="about" className="py-20 bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center px-6">
         {/* Image Section */}
-        <div className="flex justify-center">
+        <div className="flex justify-center mb-8 md:mb-0">
           <img
             src="/media/Abhishek.png" // Referencing image from the public/media folder
             alt="Abhishek Udiya"
@@ -14,8 +14,8 @@ const About = () => {
         </div>
 
         {/* Text Section */}
-        <div>
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-center md:text-left text-gray-800 mb-6">
+        <div className="text-center md:text-left">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-6">
             About <span className="text-indigo-600">Me</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-700 leading-8">
@@ -26,7 +26,7 @@ const About = () => {
           <p className="text-lg sm:text-xl text-gray-700 leading-8 mt-4">
             I earned my <span className="font-semibold text-indigo-600">Masters of Computer Applications</span> from the prestigious 
             National Institute of Technology Karnataka and my <span className="font-semibold text-indigo-600"> Bachelors of Science in Electronics (Hons.) </span> 
-             from the University of Delhi.
+            from the University of Delhi.
           </p>
           <p className="text-lg sm:text-xl text-gray-700 leading-8 mt-4">
             With nearly a year of hands-on experience in the tech industry, I have contributed to impactful projects:
@@ -43,11 +43,13 @@ const About = () => {
           </ul>
           <p className="text-lg sm:text-xl text-gray-700 leading-8 mt-4">
             I am passionate about working with <span className="font-semibold text-indigo-600">Software Engineering</span>, 
-             and modern frameworks to build solutions that address real-world challenges.
+            and modern frameworks to build solutions that address real-world challenges.
           </p>
-          <div className="mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+
+          {/* Buttons Section */}
+          <div className="mt-6 flex flex-col sm:flex-row justify-center gap-4">
             <a
-              href="https://www.linkedin.com/in/your-linkedin-profile" // Replace with your LinkedIn profile link
+              href="https://www.linkedin.com/in/abhishek-udiya-87452618b/" // Replace with your LinkedIn profile link
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-gray-800 text-white text-lg font-medium rounded-lg shadow-md hover:bg-gray-700 transition"
@@ -60,7 +62,7 @@ const About = () => {
               rel="noopener noreferrer"
               className="px-6 py-3 bg-blue-600 text-white text-lg font-medium rounded-lg shadow-md hover:bg-blue-500 transition"
             >
-              View My Resume
+              View Resume
             </a>
             <a
               href="/media/Abhishek_Udiya_Resume.pdf" // Referencing PDF from the public/media folder
