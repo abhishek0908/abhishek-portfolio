@@ -19,3 +19,7 @@ html, body {
     color: white; /* Ensures text contrast with the background */
   }
   
+  html {
+    scroll-behavior: smooth;
+  }
+  

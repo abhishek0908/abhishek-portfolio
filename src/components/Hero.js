@@ -131,15 +131,23 @@ const Hero = () => {
 
       {/* Call-to-Action Button */}
       <motion.a
-        href="#about"
-        className="mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white font-semibold text-md sm:text-lg shadow-lg flex items-center transition"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.6, duration: 0.8 }}
-      >
-        Learn More About Me
-        <ArrowDownIcon className="w-5 sm:w-6 h-5 sm:h-6 ml-2" />
-      </motion.a>
+  href="#about"
+  className="mt-8 px-6 sm:px-8 py-3 sm:py-4 bg-gray-800 hover:bg-gray-700 rounded-lg text-white font-semibold text-md sm:text-lg shadow-lg flex items-center transition"
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ delay: 0.6, duration: 0.8 }}
+  onClick={(e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const target = document.querySelector('#about');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Learn More About Me
+  <ArrowDownIcon className="w-5 sm:w-6 h-5 sm:h-6 ml-2" />
+</motion.a>
+
     </motion.section>
   );
 };
