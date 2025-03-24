@@ -11,7 +11,7 @@ const Skills = () => {
     { name: 'React', icon: <FaReact className="text-4xl text-blue-600" /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-4xl text-green-500" /> },
     { name: 'Django', icon: <SiDjango className="text-4xl text-green-800" /> },
-    { name: 'Mongo', icon: <SiMongodb className="text-4xl text-green-700" /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-4xl text-green-700" /> },
     { name: 'SQL', icon: <FaDatabase className="text-4xl text-blue-700" /> },
     { name: 'HTML5', icon: <FaHtml5 className="text-4xl text-orange-600" /> },
     { name: 'CSS3', icon: <FaCss3 className="text-4xl text-blue-500" /> },
