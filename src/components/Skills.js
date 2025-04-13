@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaPython, FaJava, FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3 } from 'react-icons/fa';
-import { SiDjango, SiMongodb, SiJavascript, SiDocker, SiRedis } from 'react-icons/si';
+import { SiDjango, SiMongodb, SiJavascript, SiDocker, SiRedis, SiAwsorganizations } from 'react-icons/si';
 import { AcademicCapIcon } from '@heroicons/react/24/outline'; // Heroicons for icons
+import AWSIcon from 'react-aws-icons/dist/aws/logo/AWS';
 
 const Skills = () => {
   const skills = [
@@ -17,6 +18,8 @@ const Skills = () => {
     { name: 'CSS3', icon: <FaCss3 className="text-4xl text-blue-500" /> },
     { name: 'Docker', icon: <SiDocker className="text-4xl text-blue-500" /> },
     { name: 'Redis', icon: <SiRedis className="text-4xl text-red-600" /> },
+    { name: 'AWS', icon: <AWSIcon size={40} /> },
+    
   ];
 
   const coreSubjects = [

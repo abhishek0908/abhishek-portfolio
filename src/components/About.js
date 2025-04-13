@@ -7,7 +7,7 @@ const About = () => {
         {/* Image Section */}
         <div className="flex justify-center md:justify-start mb-8 md:mb-0">
   <img
-    src="/media/Abhishek.png" // Referencing image from the public/media folder
+    src="/media/profile.jpeg" // Referencing image from the public/media folder
     alt="Abhishek Udiya"
     className="rounded-xl shadow-lg w-80 h-80 sm:w-96 sm:h-96 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] object-cover transition-transform transform hover:scale-105"
   />
