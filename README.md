@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# Abhishek Udiya | Senior Software Engineer Portfolio
 
-## Project info
+A unique, developer-centric portfolio designed with a modern IDE/Terminal aesthetic. This project showcases the professional journey, technical skills, and key projects of Abhishek Udiya.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🚀 Experience & Technical Expertise
 
-## How can I edit this code?
+- **Senior Software Engineer @ Videonetics**: Building distributed image-processing systems and heatmap generation pipelines.
+- **Backend Expert**: Specialized in Python, FastAPI, Django, gRPC, and Redis.
+- **Cloud & Infrastructure**: Hands-on experience with AWS (ECS, S3, RDS, VPC) and Terraform.
+- **Problem Solving**: 500+ LeetCode problems solved with a focus on algorithmic efficiency.
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/) & Custom CSS Animations
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## ✨ Key Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Terminal-Style UI**: Interactive code window and command-line aesthetics.
+- **System Monitor Dashboard**: Quick stats represented as hardware metrics (CPU/Network/Memory).
+- **Retro CRT Effect**: Subtle scanline overlay for a classic monitor feel.
+- **Mobile Optimized**: Custom full-screen terminal overlay menu for mobile devices.
+- **IDE-Style Projects**: Project cards designed to look like code files in an editor.
 
-**Use your preferred IDE**
+## 💻 Local Development
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Follow these steps to set up and run the project locally:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. **Clone the repository**
+   ```bash
+   git clone git@github.com:abhishek0908/abhishek-portfolio.git
+   cd abhishek-portfolio
+   ```
 
-Follow these steps:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📄 License
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Created by Abhishek Udiya. All rights reserved.
