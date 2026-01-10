@@ -5,9 +5,9 @@ const Footer = () => {
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-muted-foreground text-sm text-center md:text-left">
+          <p className="text-muted-foreground text-xs text-center md:text-left font-mono">
             Designed & Built by{' '}
-            <span className="text-primary">Abhishek Udiya</span>
+            <span className="text-primary italic">Abhishek Udiya</span>
           </p>
           <a
             href="https://github.com/abhishek0908"
