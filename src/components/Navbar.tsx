@@ -23,7 +23,9 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-background/90 backdrop-blur-md border-b border-border' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled && !isMobileMenuOpen
+        ? 'bg-background/90 backdrop-blur-md border-b border-border'
+        : 'bg-transparent'
         }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -66,7 +68,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 z-50 bg-background/98 backdrop-blur-xl animate-fade-in flex flex-col p-8">
+          <div className="md:hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-2xl animate-fade-in flex flex-col p-8">
             <div className="flex justify-between items-center mb-12">
               <span className="text-2xl font-bold text-gradient font-mono">AU</span>
               <button
