@@ -37,7 +37,7 @@ const Hero = () => {
 
 
             <p className="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed animate-fade-up opacity-0 font-mono" style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}>
-              I'm a <span className="text-primary">Senior Software Engineer</span> at{' '}
+              I'm a <span className="text-primary">Software Engineer</span> at{' '}
               <a href="https://videonetics.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline underline-offset-4 decoration-primary/30">@Videonetics</a>
               . I specialize in backend architecture, building robust systems, and sometimes managing cloud infrastructure.
             </p>
@@ -96,27 +96,27 @@ const Hero = () => {
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">03</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self</span>.name = <span className="text-emerald-400">"Abhishek Udiya"</span>
+                  <span className="pl-4 md:pl-8 text-orange-400">self.name</span> = <span className="text-emerald-400">"Abhishek Udiya"</span>
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">04</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self</span>.role = <span className="text-emerald-400">"Senior SE"</span>
+                  <span className="pl-4 md:pl-8 text-orange-400">self.role</span> = <span className="text-emerald-400">"Software Engineer"</span>
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">05</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self</span>.focus = [
+                  <span className="pl-4 md:pl-8 text-orange-400">self.traits</span> = [
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">06</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Backend Systems"</span>,
+                  <span className="pl-6 md:pl-12 text-emerald-400">"Ambitious"</span>,
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">07</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Infrastructure"</span>,
+                  <span className="pl-6 md:pl-12 text-emerald-400">"Curious"</span>,
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">08</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Document Generation"</span>
+                  <span className="pl-6 md:pl-12 text-emerald-400">"Hunger to Build"</span>,
                 </div>
                 <div className="flex gap-2 md:gap-4">
                   <span className="text-slate-600">09</span>
@@ -136,7 +136,7 @@ const Hero = () => {
                 </div>
                 <div className="mt-4 flex items-center gap-2 text-primary/60">
                   <span className="text-xs">$</span>
-                  <span className="terminal-cursor text-xs">systemctl status career</span>
+                  <span className="terminal-cursor text-xs">systemctl status curious_craft</span>
                 </div>
               </div>
             </div>
@@ -148,6 +148,7 @@ const Hero = () => {
                 <span>GIT:MAIN</span>
               </div>
               <p className="text-emerald-400/70">✔ build_process_completed_in_2.4s</p>
+              <p className="text-primary/80 animate-pulse font-bold">» Executing: curious_craft --visionary</p>
               <p className="text-slate-500 italic">Listening on port 3000...</p>
             </div>
           </div>

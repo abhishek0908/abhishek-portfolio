@@ -11,66 +11,71 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    title: 'Videonetics: Distributed Image Processing System',
-    description:
-      'A high-performance distributed system for forensic image processing using Python and gRPC. Achieved 40% latency reduction through multithreading optimization.',
-    technologies: ['Python', 'gRPC', 'Redis', 'PostgreSQL', 'Docker'],
-    color: '#fb923c', // Orange
-    features: [
-      'Real-time task progress monitoring',
-      'Redis-based job tracking',
-      'Microservice architecture',
-      'AWS ECS deployment',
-    ],
-  },
-  {
-    title: 'Videonetics: Heatmap Generation Pipeline',
-    description:
-      'Collaborated with ML engineers to build a microservice for heatmap generation as part of the Soterix product targeting the US market. Deployed on AWS with Terraform.',
-    technologies: ['Python', 'FastAPI', 'AWS ECS', 'S3', 'Terraform', 'Docker'],
-    color: '#a855f7', // Purple
-    features: [
-      'Scalable microservice architecture',
-      'S3 integration for data storage',
-      'Infrastructure as Code with Terraform',
-      'Private subnet deployment',
-    ],
-  },
+  /*
+    {
+      title: 'Videonetics: Distributed Image Processing System',
+      description:
+        'A high-performance distributed system for forensic image processing using Python and gRPC. Achieved 40% latency reduction through multithreading optimization.',
+      technologies: ['Python', 'gRPC', 'Redis', 'PostgreSQL', 'Docker'],
+      color: '#fb923c', // Orange
+      features: [
+        'Real-time task progress monitoring',
+        'Redis-based job tracking',
+        'Microservice architecture',
+        'AWS ECS deployment',
+      ],
+    },
+    {
+      title: 'Videonetics: Heatmap Generation Pipeline',
+      description:
+        'Collaborated with ML engineers to build a microservice for heatmap generation as part of the Soterix product targeting the US market. Deployed on AWS with Terraform.',
+      technologies: ['Python', 'FastAPI', 'AWS ECS', 'S3', 'Terraform', 'Docker'],
+      color: '#a855f7', // Purple
+      features: [
+        'Scalable microservice architecture',
+        'S3 integration for data storage',
+        'Infrastructure as Code with Terraform',
+        'Private subnet deployment',
+      ],
+    },
+  */
   {
     title: 'Personal: AI Doctor - Medical Assistant',
     description:
       'An intelligent healthcare companion that leverages advanced LLMs to provide preliminary symptom analysis and medical guidance, focusing on accessibility and accuracy.',
-    technologies: ['React', 'OpenAI API', 'Node.js', 'Pinecone', 'Tailwind CSS'],
-    github: 'https://github.com/abhishek0908/ai-doctor',
-    external: 'https://github.com/abhishek0908/ai-doctor',
+    technologies: ['React', 'Fastapi', 'LangChain', 'OpenRouter', 'PostgreSQL', 'Redis', 'Docker', 'Tailwind CSS'],
+    github: 'https://github.com/abhishek0908/curelink',
+    external: 'https://curelink.abhishekudiya.me',
     color: '#22d3ee', // Blue-Cyan
     features: [
-      'Real-time symptom assessment',
-      'Medical knowledge base retrieval',
-      'Personalized health recommendations',
-      'Secure and private consultation',
+      'Contextual memory management for personalized medical insights',
+      'Detailed onboarding for accurate patient data collection',
+      'High-precision LLM responses for clear diagnostic guidance',
+      'Integrated RAG system for verified medical knowledge retrieval',
+      'Ongoing: Long-term memory management for massive health datasets & secure encryption of user sensitive details',
     ],
   },
-  {
-    title: 'Karbon Business: Document Generation Service',
-    description:
-      'A high-performance Django-based microservice designed for automated business resolution document generation. Implemented complex layouts and styling using WeasyPrint.',
-    technologies: ['Django', 'Python', 'PostgreSQL', 'Redis', 'WeasyPrint'],
-    color: '#10b981', // Emerald
-    features: [
-      'Automated document generation pipeline',
-      'Complex CSS-to-PDF rendering',
-      'REST API for document requests',
-      'Redis-backed task processing',
-    ],
-  },
+  /*
+    {
+      title: 'Karbon Business: Document Generation Service',
+      description:
+        'A high-performance Django-based microservice designed for automated business resolution document generation. Implemented complex layouts and styling using WeasyPrint.',
+      technologies: ['Django', 'Python', 'PostgreSQL', 'Redis', 'WeasyPrint'],
+      color: '#10b981', // Emerald
+      features: [
+        'Automated document generation pipeline',
+        'Complex CSS-to-PDF rendering',
+        'REST API for document requests',
+        'Redis-backed task processing',
+      ],
+    },
+  */
   {
     title: 'Personal: Almabase - Alumni Network',
     description:
-      'A web application helping 6000+ students annually enhance their career opportunities through alumni insights and resources. Features job postings, interview experiences, academic content, and email notifications.',
-    technologies: ['Python', 'Django', 'JavaScript', 'HTML/CSS', 'PostgreSQL'],
-    github: 'https://github.com/abhishek0908',
+      'A web application aim to help 6000+ students annually enhance their career opportunities through alumni insights and resources. Features job postings, interview experiences, academic content, and email notifications.',
+    technologies: ['Python', 'Django', 'JavaScript', 'HTML/CSS', 'PostgreSQL', 'Bootstrap'],
+    github: 'https://github.com/abhishek0908/almabaseProject/tree/master',
     color: '#38bdf8', // Cyan
     features: [
       'Onboarding for 2000+ new students yearly',
@@ -163,12 +168,15 @@ const Projects = () => {
                 </div>
 
                 <div className="space-y-2 mb-8">
-                  {project.features.map((feature, i) => (
-                    <div key={i} className="flex items-start gap-3 text-sm text-muted-foreground/80 font-mono">
-                      <span className="text-primary font-bold">{'>_'}</span>
-                      <span className="text-xs">{feature}</span>
-                    </div>
-                  ))}
+                  {project.features.map((feature, i) => {
+                    const isUpcoming = feature.startsWith('Ongoing:') || feature.startsWith('Upcoming:');
+                    return (
+                      <div key={i} className={`flex items-start gap-3 text-sm font-mono transition-colors ${isUpcoming ? 'text-primary animate-pulse' : 'text-muted-foreground/80'}`}>
+                        <span className="text-primary font-bold">{'>_'}</span>
+                        <span className="text-xs">{feature}</span>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 <div className="flex flex-wrap gap-2 mt-auto">
