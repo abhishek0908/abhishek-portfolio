@@ -90,7 +90,7 @@ const AIDoctorChat = () => {
 
             {/* Chat Window */}
             {isOpen && (
-                <Card className="w-[350px] md:w-[400px] h-[500px] flex flex-col shadow-[0_20px_50px_rgba(6,182,212,0.2)] animate-in slide-in-from-bottom-5 duration-300 border-cyan-500/20 bg-background/95 backdrop-blur-md overflow-hidden">
+                <Card className="w-[350px] md:w-[400px] h-[500px] flex flex-col shadow-[0_20px_50px_rgba(0,0,0,0.4)] animate-in slide-in-from-bottom-5 duration-300 border-primary/20 bg-background overflow-hidden">
                     <CardHeader className="bg-gradient-to-r from-cyan-600 to-blue-700 p-4 text-white flex flex-row items-center justify-between">
                         <div className="flex items-center gap-3">
                             <Avatar className="border-2 border-primary-foreground/20">

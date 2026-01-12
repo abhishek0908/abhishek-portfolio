@@ -69,7 +69,7 @@ const Experience = () => {
                   <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: exp.color }} />
                 </div>
 
-                <div className="bg-card/40 backdrop-blur-md rounded border border-border/50 p-6 md:p-8 hover:border-primary/50 transition-all duration-500 group relative overflow-hidden shadow-xl">
+                <div className="bg-card/80 rounded border border-border/50 p-6 md:p-8 hover:border-primary/50 transition-all duration-500 group relative overflow-hidden shadow-xl">
                   {/* Hover background gradient */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" style={{ backgroundColor: exp.color }} />
 

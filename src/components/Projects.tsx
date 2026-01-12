@@ -96,7 +96,7 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center gap-4 mb-16">
           <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-primary font-mono text-xl mr-2">04.</span>
+            <span className="text-primary font-mono text-xl mr-2">~/src/</span>
             <span className="text-gradient">Things I've Built</span>
           </h2>
           <div className="flex-1 h-px bg-border max-w-xs" />
@@ -106,7 +106,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group relative bg-card/60 backdrop-blur-md rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 flex flex-col overflow-hidden shadow-2xl"
+              className="group relative bg-card/80 rounded-lg border border-border/50 hover:border-primary/50 transition-all duration-300 flex flex-col overflow-hidden shadow-2xl"
             >
               {/* IDE Style Top Bar */}
               <div className="flex items-center justify-between px-4 py-2 bg-secondary/80 border-b border-border/50">
@@ -156,13 +156,8 @@ const Projects = () => {
                   {project.title}
                 </h3>
 
-                <div className="flex gap-4 mb-6">
-                  <div className="flex flex-col text-[10px] font-mono text-muted-foreground/30 select-none pt-1">
-                    <span>1</span>
-                    <span>2</span>
-                    <span>3</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm flex-1 leading-relaxed line-clamp-3">
+                <div className="mb-6">
+                  <p className="text-muted-foreground text-sm flex-1 leading-relaxed">
                     {project.description}
                   </p>
                 </div>

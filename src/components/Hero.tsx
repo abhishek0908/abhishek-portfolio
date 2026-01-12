@@ -1,6 +1,60 @@
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const fullText = [
+    'class SoftwareEngineer:',
+    '  def __init__(self):',
+    '    self.name = "Abhishek Udiya"',
+    '    self.role = "Software Engineer"',
+    '    self.traits = ["Ambitious", "Curious"]',
+    '',
+    '  def deploy(self):',
+    '    print("Deployment in progress...")'
+  ];
+
+  const [currentLineIndex, setCurrentLineIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+  const [displayedLines, setDisplayedLines] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (currentLineIndex < fullText.length) {
+      const currentLine = fullText[currentLineIndex];
+
+      // If the current line is empty, skip to next line after a short delay
+      if (currentLine.length === 0) {
+        const timeout = setTimeout(() => {
+          const updatedLines = [...displayedLines];
+          updatedLines[currentLineIndex] = ''; // Initialize empty line
+          setDisplayedLines(updatedLines);
+          setCurrentLineIndex(currentLineIndex + 1);
+          setCurrentCharIndex(0);
+        }, 100);
+        return () => clearTimeout(timeout);
+      }
+
+      if (currentCharIndex < currentLine.length) {
+        const timeout = setTimeout(() => {
+          const updatedLines = [...displayedLines];
+          if (updatedLines[currentLineIndex] === undefined) {
+            updatedLines[currentLineIndex] = currentLine[currentCharIndex];
+          } else {
+            updatedLines[currentLineIndex] += currentLine[currentCharIndex];
+          }
+          setDisplayedLines(updatedLines);
+          setCurrentCharIndex(currentCharIndex + 1);
+        }, 15);
+        return () => clearTimeout(timeout);
+      } else {
+        const timeout = setTimeout(() => {
+          setCurrentLineIndex(currentLineIndex + 1);
+          setCurrentCharIndex(0);
+        }, 100);
+        return () => clearTimeout(timeout);
+      }
+    }
+  }, [currentLineIndex, currentCharIndex, displayedLines]);
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background bg-grid">
       {/* Dynamic Background Elements */}
@@ -8,8 +62,8 @@ const Hero = () => {
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px] animate-morph" />
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] animate-morph" style={{ animationDelay: '-2s' }} />
 
-        {/* Scanline Effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.1)_50%),linear-gradient(90deg,rgba(255,0,0,0.02),rgba(0,255,0,0.01),rgba(0,0,255,0.02))] bg-[length:100%_2px,3px_100%] pointer-events-none" />
+        {/* Simplified Overlay */}
+        <div className="absolute inset-0 bg-background/20 pointer-events-none" />
 
 
         {/* Floating Drifting Shapes */}
@@ -23,7 +77,7 @@ const Hero = () => {
           <div className="lg:col-span-3">
             <div className="overflow-hidden mb-4">
               <p className="text-primary font-mono text-sm md:text-base animate-fade-up translate-y-full flex items-center gap-2" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
-                <span className="opacity-50">#</span> system.init()
+                Welcome to my portfolio
               </p>
             </div>
 
@@ -48,13 +102,13 @@ const Hero = () => {
                 href="#contact"
                 className="group relative px-8 py-4 bg-primary text-black font-mono font-bold rounded overflow-hidden transition-all duration-300 hover:scale-105 active:scale-95 flex items-center gap-2"
               >
-                <span>./contact_me.sh</span>
+                <span>Get in Touch</span>
               </a>
               <a
                 href="#projects"
                 className="group px-8 py-4 border border-primary/30 text-primary font-mono font-bold rounded hover:border-primary hover:bg-primary/5 transition-all duration-300 hover:scale-105 active:scale-95"
               >
-                ls projects/
+                See My Work
               </a>
             </div>
 
@@ -85,71 +139,55 @@ const Hero = () => {
                 </div>
                 <div className="text-[10px] text-slate-500 font-mono">portfolio.py</div>
               </div>
-              <div className="p-4 md:p-6 font-mono text-[10px] sm:text-xs leading-relaxed overflow-x-auto">
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">01</span>
-                  <span className="text-purple-400">class</span> <span className="text-blue-400">SoftwareEngineer</span>:
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">02</span>
-                  <span className="pl-2 md:pl-4 text-purple-400">def</span> <span className="text-yellow-400">__init__</span>(<span className="text-orange-400">self</span>):
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">03</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self.name</span> = <span className="text-emerald-400">"Abhishek Udiya"</span>
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">04</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self.role</span> = <span className="text-emerald-400">"Software Engineer"</span>
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">05</span>
-                  <span className="pl-4 md:pl-8 text-orange-400">self.traits</span> = [
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">06</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Ambitious"</span>,
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">07</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Curious"</span>,
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">08</span>
-                  <span className="pl-6 md:pl-12 text-emerald-400">"Hunger to Build"</span>,
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">09</span>
-                  <span className="pl-4 md:pl-8 text-white/80">]</span>
-                </div>
-                <div className="flex gap-2 md:gap-4 mt-2">
-                  <span className="text-slate-600">10</span>
-                  <span className="pl-2 md:pl-4 text-purple-400">def</span> <span className="text-yellow-400">deploy</span>(<span className="text-orange-400">self</span>):
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">11</span>
-                  <span className="pl-4 md:pl-8 text-purple-400">print</span>(<span className="text-emerald-400">"Deployment in progress..."</span>)
-                </div>
-                <div className="flex gap-2 md:gap-4">
-                  <span className="text-slate-600">12</span>
-                  <span className="pl-4 md:pl-8 text-primary/80 animate-pulse">Running diagnostic checks... OK</span>
-                </div>
-                <div className="mt-4 flex items-center gap-2 text-primary/60">
-                  <span className="text-xs">$</span>
-                  <span className="terminal-cursor text-xs">systemctl status curious_craft</span>
-                </div>
+              <div className="p-4 md:p-6 font-mono text-[10px] sm:text-xs leading-relaxed overflow-x-auto min-h-[260px]">
+                {displayedLines.map((line, index) => (
+                  <div key={index} className="flex">
+                    <pre className="whitespace-pre">
+                      {line && (line.includes('class') || line.includes('def')) ? (
+                        <>
+                          <span className="text-purple-400">{line.split(' ')[0]}</span>{' '}
+                          <span className={`${line.includes('class') ? 'text-blue-400' : 'text-yellow-400'}`}>
+                            {line.split(' ').slice(1).join(' ')}
+                          </span>
+                        </>
+                      ) : line && line.includes('self.') ? (
+                        <>
+                          <span className="pl-4 md:pl-8 text-orange-400">{line.trim().split(' ')[0]}</span>{' '}
+                          {line.trim().split(' ').slice(1).join(' ')}
+                        </>
+                      ) : line && line.includes('print') ? (
+                        <span className="pl-4 md:pl-8">
+                          <span className="text-purple-400">print</span>
+                          {line.trim().slice(5)}
+                        </span>
+                      ) : (
+                        <span className="text-white/80">{line || ''}</span>
+                      )}
+                    </pre>
+                  </div>
+                ))}
+                {currentLineIndex >= fullText.length && (
+                  <>
+                    <div className="flex">
+                      <span className="pl-4 md:pl-8 text-primary/80 animate-pulse">Running diagnostic checks... OK</span>
+                    </div>
+                    <div className="mt-4 flex items-center gap-2 text-primary/60">
+                      <span className="text-xs">$</span>
+                      <span className="terminal-cursor text-xs">systemctl status portfolio</span>
+                    </div>
+                  </>
+                )}
               </div>
-            </div>
-
-            {/* Floating Terminal Snippet */}
-            <div className="mt-4 bg-black/40 backdrop-blur-sm border border-border/30 p-4 rounded-lg font-mono text-[10px] space-y-1">
-              <div className="flex justify-between text-slate-500">
-                <span>TERMINAL</span>
-                <span>GIT:MAIN</span>
+              {/* Floating Terminal Snippet */}
+              <div className="mt-4 bg-black/60 border border-border/30 p-4 rounded-lg font-mono text-[10px] space-y-1">
+                <div className="flex justify-between text-slate-500">
+                  <span>TERMINAL</span>
+                  <span>GIT:MAIN</span>
+                </div>
+                <p className="text-emerald-400/70">✔ build_process_completed_in_2.4s</p>
+                <p className="text-primary/80 animate-pulse font-bold">» Executing: portfolio --live</p>
+                <p className="text-slate-500 italic">Listening on port 3000...</p>
               </div>
-              <p className="text-emerald-400/70">✔ build_process_completed_in_2.4s</p>
-              <p className="text-primary/80 animate-pulse font-bold">» Executing: curious_craft --visionary</p>
-              <p className="text-slate-500 italic">Listening on port 3000...</p>
             </div>
           </div>
         </div>

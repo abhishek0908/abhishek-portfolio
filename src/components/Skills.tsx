@@ -42,7 +42,7 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="group p-8 bg-card/40 backdrop-blur-md rounded border border-border/50 hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
+              className="group p-8 bg-card/80 rounded border border-border/50 hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
             >
               <h3 className="text-sm font-mono text-foreground mb-6 flex items-center gap-3">
                 <span className="text-primary">#</span>
@@ -70,7 +70,7 @@ const Skills = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 justify-between">
             <div className="text-left">
               <h3 className="text-xl font-bold text-foreground mb-2 font-mono flex items-center gap-2">
-                <span className="text-primary">{" >>> "}</span> logic_engine.init()
+                Problem Solving
               </h3>
               <p className="text-muted-foreground text-sm font-mono">
                 Continuous improvement of algorithmic efficiency and complex problem solving.

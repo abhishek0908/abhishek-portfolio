@@ -82,7 +82,7 @@ const Navbar = () => {
             <div className="flex flex-col gap-6">
               <div className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-2 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                session.mobile_active
+                Menu
               </div>
 
               {navLinks.map((link, index) => (
@@ -104,7 +104,7 @@ const Navbar = () => {
                   rel="noopener noreferrer"
                   className="block w-full text-center px-4 py-4 border border-primary text-primary rounded font-mono font-bold hover:bg-primary/10 transition-all duration-300"
                 >
-                  cat resume.pdf
+                  Download Resume
                 </a>
               </div>
             </div>
